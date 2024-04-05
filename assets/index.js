@@ -16,7 +16,7 @@ function bmiCalcStandard(weight, height) {
     var height = document.getElementById('height').value;
     var usCalc = Math.floor((weight / height / height) * 703);
     counterEl.innerText = usCalc;
-    alert("Thanks for using Floyd's BMI Calulator, now hit the gym 💪");
+    // alert("Thanks for using Floyd's BMI Calulator, now hit the gym 💪");
 };
 
 // function calculateBMI() {
