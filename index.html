@@ -8,23 +8,31 @@
 </head>
 <body>
     <div class="app-container">
-        <h1>Please Enter Your Inches & Pounds:</h1>
+        <h1>BMI Calculator</h1>
         <!-- <input type="checkbox" id="toggle">
         <label for="toggle">Check for Standard US System</label> 
         <br /> 
         <br />    -->
-        <input type="text" id="weight" placeholder="Enter your Weight" name="weight" />
+        <label for="weight" class="fieldLabel">Enter Weight <span id="ital">(numbers only)</span>:</label>
+        <br />
+        <input type="text" id="weight" placeholder="ex: 180" name="weight" />
         <br />
         <br />
-        <input type="text" id="height" placeholder="Enter your Height" name="height" />
+        <label for="height" class="fieldLabel">Enter Height <span id="ital">(numbers only)</span>:</label>
+        <br />
+        <input type="text" id="height" placeholder="ex: 56" name="height" />
+        <br />
+        <br />
         <hr />
-
+        <p id="bmiHeader"></p>
         <h2 id="bmi">0</h2>
+        <p id="bmiMessage"></p>
         <button id="calculcate-btn" onclick="bmiCalcStandard()">CALCULATE</button>
         <p id="message"></p>
+        <p id="momTested">Mom Tested ❤️</p>
     </div>
     
-    
     <script src="./assets/index.js"></script>
+    
 </body>
 </html>

@@ -1,3 +1,6 @@
+let bmiHeaderEl = document.getElementById("bmiHeader");
+bmiHeaderEl.innerHTML = "Your BMI is:";
+
 let messageEl = document.getElementById("message");
 messageEl.innerHTML = "Floyd's BMI Calculator &copy 2024";
 
@@ -16,6 +19,23 @@ function bmiCalcStandard(weight, height) {
     var height = document.getElementById('height').value;
     var usCalc = Math.floor((weight / height / height) * 703);
     counterEl.innerText = usCalc;
+    displayMessage (usCalc);
+};
+
+function displayMessage(usCalc) {
+    let bmiMessageEl = document.getElementById("bmiMessage");
+    if (usCalc > 30) {
+        bmiMessageEl.innerHTML = "Your Body Mass Index is: " + usCalc + " (Obesity). Let's hit the gym 💪";
+    };
+    if (usCalc < 30 && usCalc >= 25) {
+        bmiMessageEl.innerHTML = "Your Body Mass Index is: " + usCalc + " (Overweight). Let's hit the gym 💪";
+    };
+    if (usCalc < 25 && usCalc >= 18.5) {
+        bmiMessageEl.innerHTML = "Your Body Mass Index is: " + usCalc + " (Healthy Weight). Congrats, but still hit the gym 💪";
+    };
+    if (usCalc < 18.5) {
+        bmiMessageEl.innerHTML = "Your Body Mass Index is: " + usCalc + " (Under Weight). Please eat something 🥪";
+    };
 };
 
 // function calculateBMI() {
